@@ -115,14 +115,31 @@
         #about-me-link:hover {
             color: #FFA500;
         }
+        .video-container {
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 4px;
+        }
+        .photo-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .photo-container img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
 <div class="about-me">
-    <h2><a href="#" id="about-me-link">About Me</a></h2>
+    <h2><a href="#" id="about-me-link">ABOUT ME</a></h2>
     <div class="about-me-content" id="about-me-content">
-        <p>I am a full stack engineer with hands-on experience in web and mobile development. I am committed to teaching you everything you need to know to excel in the technical field and break into the industry. I believe automation is the best way to get started, and you can build your career from there.</p>
+        <p>I am a full stack engineer with extensive hands-on experience in web and mobile development. I am dedicated to teaching you everything you need to excel in the technical field and successfully break into the industry. I believe that automation is a key starting point, providing a solid foundation upon which to build a thriving career.</p>
     </div>
 </div>
 
@@ -131,7 +148,7 @@
         <h1>Automation Syllabus and Course Overview</h1>
         <div class="shortened-content">
             <h2>Course Overview</h2>
-            <p>This course offers a thorough introduction to software automation testing with hands-on projects in Android, iOS, and web applications. Gain practical experience with different IDEs and programming languages.</p>
+            <p> This course offer the introduction to Automation engineer, You will learn with hands - on project</p>
             <h2>Course Outline</h2>
             <h3>1. Introduction to Automation Testing</h3>
             <ul>
@@ -160,6 +177,8 @@
             <h3>7. Writing and Managing Test Scripts</h3>
             <ul>
                 <li>Writing effective test scripts</li>
+
+                <li>Writing test scripts in a markdown format</li>
             </ul>
             <h3>8. Version Control and Collaboration with GitHub</h3>
             <ul>
@@ -173,15 +192,21 @@
             <ul>
                 <li>Using Postman for API testing</li>
             </ul>
-            <h3>11. Final Preparations and Q&A</h3>
+            <h3>11. Final Preparations </h3>
             <ul>
                 <li>CV tips, Interview preparation</li>
+            </ul>
+            </ul>
+                <h3>12.Questions </h3>
+             <li> All questions about everything we have covered since e started  </li>
             </ul>
         </div>
     </div>
     <div class="column right">
         <h1>Course Registration Form</h1>
-        <form action="https://your-server-endpoint" method="post">
+        <form action="https://formspree.io/f/mgvwdlbr"
+                method="POST">
+            <!-- Form fields here -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -203,6 +228,18 @@
 
             <button type="submit">Submit</button>
         </form>
+
+        <!-- Video Section -->
+        <div class="video-container">
+            <h2>Watch Our Intro Video</h2>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="photo-container">
+            <h2>Featured Photo</h2>
+            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Featured Photo">
+        </div>
     </div>
 </div>
 
