@@ -8,81 +8,58 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fDE2OTAzODI1OTR8&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
             background-size: cover;
+            color: #fff;
         }
         .container {
             display: flex;
+            flex-direction: column;
             max-width: 1200px;
             margin: auto;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
         }
         .column {
-            flex: 1;
-            padding: 20px;
+            padding: 10px;
             box-sizing: border-box;
             border-radius: 8px;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            color: #fff;
         }
-        .column.left {
-            background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fDE2OTAzODI1OTR8&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center;
-            background-size: cover;
-            margin-right: 20px;
-        }
-        .column.right {
-            background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fDE2OTAzODI1OTR8&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center;
-            background-size: cover;
-        }
-        .column::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-        .column > * {
-            position: relative;
-            z-index: 2;
+        h1, h2, h3 {
+            color: #FFD700;
         }
         h1 {
             text-align: center;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.9);
             padding: 10px;
             border-radius: 4px;
+            margin-bottom: 20px;
         }
         label {
             display: block;
-            margin: 10px 0 5px;
-            color: #fff;
+            margin: 5px 0;
+            color: #FFD700;
         }
         input, select, textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 8px;
+            margin-bottom: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            background: #fff;
-            color: #333;
+            background: #333;
+            color: #fff;
         }
         button {
             background-color: #4CAF50;
             color: #fff;
             border: none;
-            padding: 15px 20px;
+            padding: 12px 20px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             margin: 10px 0;
             cursor: pointer;
@@ -92,37 +69,44 @@
             font-size: 14px;
             line-height: 1.6;
         }
-        .about-me {
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+        .about-me, .video-container, .faq {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
             border-radius: 8px;
-            color: #fff;
-        }
-        .about-me a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .about-me a:hover {
-            text-decoration: underline;
         }
         #about-me-link {
-            font-size: 24px;
+            font-size: 22px;
             color: #FFD700;
             text-decoration: none;
         }
-        #about-me-link:hover {
-            color: #FFA500;
+        a {
+            color: #FFD700;
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+            .column {
+                flex: 1;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 767px) {
+            .container {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="about-me">
-    <h2><a href="#" id="about-me-link">About Me</a></h2>
+    <h2><a href="#" id="about-me-link">ABOUT ME</a></h2>
     <div class="about-me-content" id="about-me-content">
-        <p>I am a full stack engineer with hands-on experience in web and mobile development. I am committed to teaching you everything you need to know to excel in the technical field and break into the industry. I believe automation is the best way to get started, and you can build your career from there.</p>
+        <p>I am a full stack engineer with extensive hands-on experience in web and mobile development. I am dedicated to teaching you everything you need to excel in the technical field and successfully break into the industry. I believe that automation is a key starting point, providing a solid foundation upon which to build a thriving career.</p>
     </div>
 </div>
 
@@ -131,7 +115,30 @@
         <h1>Automation Syllabus and Course Overview</h1>
         <div class="shortened-content">
             <h2>Course Overview</h2>
-            <p>This course offers a thorough introduction to software automation testing with hands-on projects in Android, iOS, and web applications. Gain practical experience with different IDEs and programming languages.</p>
+            <p>This course offers an introduction to Automation Engineering, focusing on hands-on projects to equip you with practical skills.</p>
+            <h2>Learning Outcomes</h2>
+            <ul>
+                <li>Able to develop and run automated tests</li>
+                <li>Proficient in using GitHub for version control</li>
+                <li>Creating test scripts in markdown format</li>
+                <li>Running tests in a CI/CD pipeline</li>
+                <li>Using Azure DevOps for project management</li>
+                <li>Creating PBIs and understanding Agile methodology</li>
+                <li>And much more!</li>
+            </ul>
+            <h2>Tools You'll Be Using</h2>
+            <ul>
+                <li>IntelliJ IDE for web frameworks</li>
+                <li>Android Studio for Android app development</li>
+                <li>GitHub for version control</li>
+                <li>Microsoft Teams for meetings and messaging</li>
+            </ul>
+            <h2>Course Schedule</h2>
+            <p>The course will run for 2 months, with sessions held 3 times a week on Wednesdays, Thursdays, and Fridays from 18:00 to 20:00. If you're unable to join live, all classes will be recorded and made available to you.</p>
+            <h2>Assignments</h2>
+            <p>Starting from the second week, assignments will be given to ensure students remain fully engaged and focused throughout the course.</p>
+            <h2>Pricing</h2>
+            <p>The course is priced at £500, with a flexible payment plan available. You can pay half the amount before the course begins, and the remaining balance can be settled one month later.</p>
             <h2>Course Outline</h2>
             <h3>1. Introduction to Automation Testing</h3>
             <ul>
@@ -139,19 +146,27 @@
             </ul>
             <h3>2. Hands-On Project Experience</h3>
             <ul>
-                <li>Develop basic apps for Android and iOS</li>
+                <li>Develop basic apps for Android and web development</li>
             </ul>
             <h3>3. Version Control with GitHub</h3>
             <ul>
-                <li>Setting up GitHub, Cloning projects, Repositories</li>
+                <li>Setting up GitHub</li>
+                <li>Cloning repositories</li>
+                <li>Commits and pushing changes to server</li>
+                <li>Creating repositories</li>
             </ul>
             <h3>4. Development Environment Setup</h3>
             <ul>
-                <li>Setting up Android Studio and Xcode</li>
+                <li>Azure DevOps</li>
+                <li>Project management</li>
+                <li>Creating PBIs</li>
+                <li>Agile methodology</li>
+                <li>Setting up Android Studio, IntelliJ, Java</li>
             </ul>
             <h3>5. Project Initialization and Configuration</h3>
             <ul>
-                <li>Library management, Running projects locally</li>
+                <li>Library management</li>
+                <li>Running projects locally</li>
             </ul>
             <h3>6. Developing a Test Framework</h3>
             <ul>
@@ -160,10 +175,13 @@
             <h3>7. Writing and Managing Test Scripts</h3>
             <ul>
                 <li>Writing effective test scripts</li>
+                <li>Writing test scripts in markdown format</li>
+                <li>Writing test cases in markdown format with Excel and Word</li>
             </ul>
             <h3>8. Version Control and Collaboration with GitHub</h3>
             <ul>
-                <li>Committing changes, Pull requests</li>
+                <li>Committing changes</li>
+                <li>Pull requests</li>
             </ul>
             <h3>9. Integrating Tests into CI/CD Pipelines</h3>
             <ul>
@@ -173,15 +191,39 @@
             <ul>
                 <li>Using Postman for API testing</li>
             </ul>
-            <h3>11. Final Preparations and Q&A</h3>
+            <h3>11. Final Preparations</h3>
             <ul>
-                <li>CV tips, Interview preparation</li>
+                <li>CV tips</li>
+                <li>Interview preparation</li>
+            </ul>
+            <h3>12. Questions</h3>
+            <ul>
+                <li>All questions about everything we have covered since we started</li>
             </ul>
         </div>
+
+        <!-- Enroll Now Button -->
+        <button onclick="window.location.href='#registration-form';">Enroll Now</button>
+
+        <!-- Social Media Links -->
+        <div class="social-media-links">
+            <h2>Follow Us:</h2>
+            <a href="https://www.facebook.com">Facebook</a><br>
+            <a href="https://www.instagram.com">Instagram</a><br>
+            <a href="https://www.youtube.com">YouTube</a><br>
+            <a href="https://www.tiktok.com">TikTok</a>
+        </div>
+
+        <!-- Video Content -->
+        <div class="video-container">
+            <h2>Watch Our Intro Video:</h2>
+            <a href="https://www.youtube.com/watch?v=example_video" target="_blank">Course Introduction Video</a>
+        </div>
     </div>
+
     <div class="column right">
-        <h1>Course Registration Form</h1>
-        <form action="https://your-server-endpoint" method="post">
+        <h1 id="registration-form">Course Registration Form</h1>
+        <form action="https://formspree.io/f/mgvwdlbr" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -195,31 +237,31 @@
                 <option value="advanced">Advanced</option>
             </select>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="expectations">Expectations from the course:</label>
+            <textarea id="expectations" name="expectations" rows="4" required></textarea>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <label for="message">Additional Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
 
             <button type="submit">Submit</button>
         </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:monsieurmo412@hotmail.com">monsieurmo412@hotmail.com</a></p>
+            <p>Phone: +447440791981</p>
+        </div>
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var aboutMeLink = document.getElementById('about-me-link');
-        var aboutMeContent = document.getElementById('about-me-content');
+<!-- FAQ Section -->
+<div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: Do I need prior experience to enroll?</strong><br>A: No prior experience is necessary. This course is suitable for beginners.</p>
+    <p><strong>Q: What if I miss a live session?</strong><br>A: All sessions are recorded and will be made available for you to watch at your convenience.</p>
+    <p><strong>Q: Are there any additional costs?</strong><br>A: No, the course fee covers all materials and resources.</p>
+</div>
 
-        aboutMeLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (aboutMeContent.style.display === 'none' || aboutMeContent.style.display === '') {
-                aboutMeContent.style.display = 'block';
-            } else {
-                aboutMeContent.style.display = 'none';
-            }
-        });
-    });
-</script>
 </body>
 </html>
