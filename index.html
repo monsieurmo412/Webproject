@@ -8,29 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fDE2OTAzODI1OTR8&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
         .container {
             display: flex;
+            flex-direction: column;
             max-width: 1200px;
             margin: auto;
             padding: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             border-radius: 8px;
             background: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
         }
         .column {
-            flex: 1;
             padding: 10px;
             box-sizing: border-box;
             border-radius: 8px;
         }
+        h1, h2, h3 {
+            color: #FFD700;
+        }
         h1 {
             text-align: center;
-            color: #FFD700;
             background: rgba(0, 0, 0, 0.9);
             padding: 10px;
             border-radius: 4px;
@@ -66,11 +69,8 @@
             font-size: 14px;
             line-height: 1.6;
         }
-        .shortened-content h3 {
-            margin: 10px 0;
-        }
-        .about-me {
-            margin-top: 20px;
+        .about-me, .video-container, .faq {
+            margin-top: 15px;
             padding: 15px;
             background: rgba(0, 0, 0, 0.9);
             border-radius: 8px;
@@ -80,27 +80,24 @@
             color: #FFD700;
             text-decoration: none;
         }
-        .video-container, .photo-container {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.9);
-            border-radius: 8px;
-        }
-        .faq {
-            margin-top: 15px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.9);
-            border-radius: 8px;
-        }
-        .faq h2 {
-            color: #FFD700;
-        }
-        .faq p {
-            margin: 8px 0;
-        }
         a {
             color: #FFD700;
             text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+            .column {
+                flex: 1;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 767px) {
+            .container {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -119,6 +116,33 @@
         <div class="shortened-content">
             <h2>Course Overview</h2>
             <p>This course offers an introduction to Automation Engineering, focusing on hands-on projects to equip you with practical skills.</p>
+            <h2>Learning Outcomes</h2>
+            <ul>
+                <li>Able to develop and run automated tests</li>
+                <li>Proficient in using GitHub for version control</li>
+                <li>Creating test scripts in markdown format</li>
+                <li>Running tests in a CI/CD pipeline</li>
+                <li>Using Azure DevOps for project management</li>
+                <li>Creating PBIs and understanding Agile methodology</li>
+                <li>And much more!</li>
+            </ul>
+            <h2>Tools You'll Be Using</h2>
+            <ul>
+                <li>IntelliJ IDE for web frameworks</li>
+                <li>Android Studio for Android app development</li>
+                <li>GitHub for version control</li>
+                <li>Microsoft Teams for meetings and messaging</li>
+            </ul>
+            <h2>Course Schedule</h2>
+            <p>The course will run for 2 months, with sessions held 3 times a week on Wednesdays, Thursdays, and Fridays from 18:00 to 20:00. If you're unable to join live, all classes will be recorded and made available to you.</p>
+            <h2>Assignments</h2>
+            <p>Starting from the second week, assignments will be given to ensure students remain fully engaged and focused throughout the course.</p>
+            <h2>Unlock a Promising Career with Guaranteed Growth</h2>
+            <p>The tech industry offers an excellent career path with immense opportunities. You'll enjoy the flexibility of working from home, access to high-paying jobs,
+                and assured career progression as you develop your skills.</p>
+
+            <h2>Pricing</h2>
+            <p>The course is priced at £500, with a flexible payment plan available. You can pay half the amount before the course begins, and the remaining balance can be settled one month later.</p>
             <h2>Course Outline</h2>
             <h3>1. Introduction to Automation Testing</h3>
             <ul>
@@ -126,19 +150,27 @@
             </ul>
             <h3>2. Hands-On Project Experience</h3>
             <ul>
-                <li>Develop basic apps for Android and iOS</li>
+                <li>Develop basic apps for Android and web development</li>
             </ul>
             <h3>3. Version Control with GitHub</h3>
             <ul>
-                <li>Setting up GitHub, Cloning projects, Repositories</li>
+                <li>Setting up GitHub</li>
+                <li>Cloning repositories</li>
+                <li>Commits and pushing changes to server</li>
+                <li>Creating repositories</li>
             </ul>
             <h3>4. Development Environment Setup</h3>
             <ul>
-                <li>Setting up Android Studio and Xcode</li>
+                <li>Azure DevOps</li>
+                <li>Project management</li>
+                <li>Creating PBIs</li>
+                <li>Agile methodology</li>
+                <li>Setting up Android Studio, IntelliJ, Java</li>
             </ul>
             <h3>5. Project Initialization and Configuration</h3>
             <ul>
-                <li>Library management, Running projects locally</li>
+                <li>Library management</li>
+                <li>Running projects locally</li>
             </ul>
             <h3>6. Developing a Test Framework</h3>
             <ul>
@@ -147,11 +179,13 @@
             <h3>7. Writing and Managing Test Scripts</h3>
             <ul>
                 <li>Writing effective test scripts</li>
-                <li>Writing test scripts in a markdown format</li>
+                <li>Writing test scripts in markdown format</li>
+                <li>Writing test cases in markdown format with Excel and Word</li>
             </ul>
             <h3>8. Version Control and Collaboration with GitHub</h3>
             <ul>
-                <li>Committing changes, Pull requests</li>
+                <li>Committing changes</li>
+                <li>Pull requests</li>
             </ul>
             <h3>9. Integrating Tests into CI/CD Pipelines</h3>
             <ul>
@@ -163,13 +197,17 @@
             </ul>
             <h3>11. Final Preparations</h3>
             <ul>
-                <li>CV tips, Interview preparation</li>
+                <li>CV tips</li>
+                <li>Interview preparation</li>
             </ul>
             <h3>12. Questions</h3>
             <ul>
                 <li>All questions about everything we have covered since we started</li>
             </ul>
         </div>
+
+        <!-- Enroll Now Button -->
+        <button onclick="window.location.href='#registration-form';">Enroll Now</button>
 
         <!-- Social Media Links -->
         <div class="social-media-links">
@@ -188,7 +226,7 @@
     </div>
 
     <div class="column right">
-        <h1>Course Registration Form</h1>
+        <h1 id="registration-form">Course Registration Form</h1>
         <form action="https://formspree.io/f/mgvwdlbr" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -203,54 +241,32 @@
                 <option value="advanced">Advanced</option>
             </select>
 
-            <label for="interests">Interests:</label>
-            <textarea id="interests" name="interests" rows="3" placeholder="Tell us about your interests..."></textarea>
+            <label for="expectations">Expectations from the course:</label>
+            <textarea id="expectations" name="expectations" rows="4" required></textarea>
 
-            <label for="expectations">Expectations:</label>
-            <textarea id="expectations" name="expectations" rows="3" placeholder="What do you expect from the course?"></textarea>
+            <label for="message">Additional Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
 
             <button type="submit">Submit</button>
         </form>
 
-        <div class="faq">
-            <h2>FAQ</h2>
-            <p><strong>How will I benefit from this course?</strong><br>
-                By taking this course, you'll acquire practical automation skills that are highly sought after in the tech industry. These skills will enable you to work on real-world projects, enhance your resume, and open up new career opportunities.</p>
-            <p><strong>After completing the training, can I secure a job?</strong><br>
-                Yes, our course is designed to help you land a job. We offer comprehensive interview preparation, CV enhancement tips, and access to our network of hiring partners to increase your chances of securing a position in automation.</p>
-            <p><strong>Can I work remotely after finishing the course?</strong><br>
-                Absolutely! The skills you learn can be applied to remote positions, giving you the flexibility to work from anywhere in the world.</p>
-            <p><strong>What prerequisites do I need to join this course?</strong><br>
-                This course is suitable for learners at all levels, from beginners to advanced. No prior experience in automation is required, although a basic understanding of programming concepts can be helpful.</p>
-            <p><strong>How long does the course take to complete?</strong><br>
-                The course is designed to be completed in 8-12 weeks, depending on your pace. We offer flexible learning schedules to fit your availability and learning speed.</p>
-            <p><strong>What kind of projects will I work on during the course?</strong><br>
-                You will engage in real-world projects such as developing test frameworks, performing API testing, and setting up CI/CD pipelines. These hands-on experiences are designed to equip you with practical skills that you can showcase to potential employers.</p>
-            <p><strong>How do I know if this course is right for me?</strong><br>
-                This course is ideal if you're looking to start or advance a career in automation. It's perfect for those who want hands-on experience with real projects and seek a flexible learning environment that caters to both beginners and experienced professionals.</p>
-            <p><strong>What do I need to participate in the course?</strong><br>
-                You'll need a computer with internet access to participate in the course. All necessary software and tools will be provided or guided through the course.</p>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:monsieurmo412@hotmail.com">monsieurmo412@hotmail.com</a></p>
+            <p>Phone: +447440791981</p>
         </div>
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var aboutMeLink = document.getElementById('about-me-link');
-        var aboutMeContent = document.getElementById('about-me-content');
-
-        aboutMeLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (aboutMeContent.style.display === 'none' || aboutMeContent.style.display === '') {
-                aboutMeContent.style.display = 'block';
-            } else {
-                aboutMeContent.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-</div>
+<!-- FAQ Section -->
+<div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: Do I need prior experience to enroll?</strong><br>A: No prior experience is necessary. This course is suitable for beginners.</p>
+    <p><strong>Q: What if I miss a live session?</strong><br>A: All sessions are recorded and will be made available for you to watch at your convenience.</p>
+    <p><strong>Q: Will I get a job after completing the training?</strong>
+    <p>A: After completing the training, you'll be qualified as an Automation Engineer, SDET, or Automation Tester.
+        These roles are in high demand globally, and you'll have the opportunity to apply for positions that offer the flexibility to work remotely from anywhere in the world.</p>
 </div>
 
 </body>
